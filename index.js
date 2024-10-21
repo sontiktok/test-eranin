@@ -1,10 +1,10 @@
-// Khởi tạo cấu hình môi trường và các thư viện cần thiết
 const express = require("express");
-const dotenv = require("dotenv");
 const authRouter = require("./routes/auth");
 const sequelize = require("./config/database");
+const otpRouter = require("./routes/otp");
+
 const cors = require("cors");
-dotenv.config();
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -21,6 +21,7 @@ sequelize
   });
 
 app.use("/auth", authRouter);
+app.use("/otp", otpRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

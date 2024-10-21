@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-// Cấu hình transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
@@ -13,7 +12,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Định nghĩa hàm sendMail
 const sendMail = async (email, otp) => {
   const mailOptions = {
     from: {
