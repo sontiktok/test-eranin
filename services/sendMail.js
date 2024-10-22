@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: process.env.USER,
-    pass: process.env.PASSWORD,
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -16,7 +16,7 @@ const sendMail = async (email, otp) => {
   const mailOptions = {
     from: {
       name: "Eranin Group",
-      address: process.env.USER,
+      address: process.env.EMAIL_USERNAME,
     },
     to: email,
     subject: "Xác thực đăng nhập",

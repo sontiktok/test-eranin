@@ -124,7 +124,6 @@ exports.refreshToken = async (req, res) => {
   }
   try {
     const decoded = jwt.verify(refreshToken, REFRESH_SECRET);
-    console.log(decoded);
     const { tokenId } = decoded;
     const tokenModel = await Token.findOne({
       where: {
