@@ -94,7 +94,7 @@ npm start
   Relational database.
 
 - **Sequelize**  
-  ODM (Object Data Modeling) for MySQL in a Node.js environment.
+  ORM (Object-Relational Mapping) for MySQL in a Node.js environment.
 
 - **Nodemailer**  
   Library for sending emails with Node.js.
